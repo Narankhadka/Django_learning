@@ -24,7 +24,6 @@ SECRET_KEY = "django-insecure-pkm8_w9z+09ohu320(#f#js2=)9omf!bio(l=q)y@uwon9fuq2
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
@@ -54,7 +53,7 @@ ROOT_URLCONF = "mysite.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -115,3 +114,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'mysite/static'
+]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
